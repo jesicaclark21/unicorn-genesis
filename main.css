@@ -184,7 +184,7 @@ border-color: #111 transparent transparent transparent;
   }
 
 body:before {
-   content:"\02C5";
+   content:"\21A7";
    position:fixed;
    bottom:0;
    width:7%;
