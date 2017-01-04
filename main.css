@@ -184,8 +184,7 @@ border-color: #111 transparent transparent transparent;
   }
 
 body:before {
-   font-family: "squarespace-ui-font";
-   content:"\e009";
+   content:"&#709";
    position:fixed;
    bottom:0;
    width:7%;
