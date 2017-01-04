@@ -182,3 +182,33 @@ border-color: #111 transparent transparent transparent;
     100% { top:0; }
 
   }
+
+body:before {
+   font-family: "squarespace-ui-font";
+   content:"\e009";
+   position:fixed;
+   bottom:0;
+   width:7%;
+   text-align:center;
+   z-index:1000;
+   display:block;
+   color:#FFF;
+   font-size:4vw;
+   background-color: transparent;
+   margin-left:46%;
+   margin-right:46%;
+   padding:.3em .1em;
+   -webkit-transition: opacity 1s ease-in-out;
+   -moz-transition: opacity 1s ease-in-out;
+   -ms-transition: opacity 1s ease-in-out;
+   -o-transition: opacity 1s ease-in-out;
+
+ }
+
+ .scrolled:before {
+   -webkit-transition: opacity 2s ease-in-out;
+   -moz-transition: opacity 2s ease-in-out;
+   -ms-transition: opacity 2s ease-in-out;
+   -o-transition: opacity 2s ease-in-out;
+   opacity: 0;
+ }
