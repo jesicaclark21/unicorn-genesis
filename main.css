@@ -163,26 +163,6 @@ border-color: #111 transparent transparent transparent;
 }
 
 
-.arrow-wrap:hover .hint {
-  opacity:1;
-}
-
-
-  @-webkit-keyframes arrows {
-    0% { top:0; }
-    10% { top:12%; }
-    20% { top:0; }
-    30% { top:12%; }
-    40% { top:-12%; }
-    50% { top:12%; }
-    60% { top:0; }
-    70% { top:12%; }
-    80% { top:-12%; }
-    90% { top:12%; }
-    100% { top:0; }
-
-  }
-
 body:before {
    content:"\02C5";
    position:fixed;
