@@ -185,7 +185,7 @@ border-color: #111 transparent transparent transparent;
 
 body:before {
    font-family: 'Times New Roman', serif;
-   content:"&#709;";
+   content:"\&#709;";
    position:fixed;
    bottom:0;
    width:7%;
