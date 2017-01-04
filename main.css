@@ -184,7 +184,7 @@ border-color: #111 transparent transparent transparent;
   }
 
 body:before {
-   content:"&#709";
+   content:"U+02C5";
    position:fixed;
    bottom:0;
    width:7%;
