@@ -184,8 +184,7 @@ border-color: #111 transparent transparent transparent;
   }
 
 body:before {
-   font-family: 'Times New Roman', serif;
-   content:"\&#709;";
+   content:"\02C5";
    position:fixed;
    bottom:0;
    width:7%;
