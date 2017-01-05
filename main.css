@@ -69,8 +69,8 @@ td h1 {
     background-size: cover;
 }
 
-/* Turn off parallax scrolling for tablets and phones. Increase/decrease the pixels if needed */
-@media only screen and (max-device-width: 600px) {
+/* Turn off parallax scrolling and stack table. Increase/decrease the pixels if needed */
+@media screen and (max-width: 600px) {
 .titlecard-1, .titlecard-2, .titlecard-3, .titlecard-4, .titlecard-5 {
   background-attachment: scroll;
   }
@@ -100,6 +100,11 @@ tbody td {
   height: 50%;
 }
 
+.titlecard-3 {
+  background-image: url(phil-banner.jpg);
+  height: 100%;
+}
+
 .infocard {
   background-color: white;
   color: #777;
@@ -108,60 +113,6 @@ tbody td {
 
 
 /* That silly ol' scroll arrow*/
-
-.arrow-wrap {
-  position:absolute;
-  z-index:1;
-  left:50%;
-  top:-5em;
-  margin-left:-5em;
-  background:#111;
-  width:10em;
-  height:10em;
-  padding:4em 2em;
-  border-radius:50%;
-  font-size:0.5em;
-  display:block;
-  box-shadow:0px 0px 5px 0px #333;
-}
-
-.arrow {
-  float:left;
-  position:relative;
-  width: 0px;
-height: 0px;
-border-style: solid;
-border-width: 3em 3em 0 3em;
-border-color: #ffffff transparent transparent transparent;
-  -webkit-transform:rotate(360deg)
-}
-
-.arrow:after {
-  content:'';
-  position:absolute;
-  top:-3.2em;
-  left:-3em;
-  width: 0px;
-height: 0px;
-border-style: solid;
-border-width: 3em 3em 0 3em;
-border-color: #111 transparent transparent transparent;
-  -webkit-transform:rotate(360deg)
-}
-
-
-.hint {
-  position:absolute;
-  top:0.6em;
-  width:100%;
-  left:0;
-  font-size:2em;
-  font-style:italic;
-  text-align:center;
-  color:#fff;
-  opacity:0;
-}
-
 
 body:before {
    content:"\02C5";
@@ -172,7 +123,7 @@ body:before {
    z-index:1000;
    display:block;
    color:#FFF;
-   font-size:4vw;
+   font-size:6vw;
    background-color: transparent;
    margin-left:46%;
    margin-right:46%;
