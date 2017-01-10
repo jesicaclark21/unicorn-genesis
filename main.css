@@ -88,7 +88,7 @@ margin-top: 10px;
   padding: 0px 15px;
 }
 
-.grid::after {
+.grid:after {
   content: "";
   display: table;
   clear: both;
