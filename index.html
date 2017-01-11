@@ -22,12 +22,9 @@
   <div style="height: 1px" id="trigger">
   </div>
   <div class="titlecard-2">
-    <div id="target">
-      <img id="genesis-unicorn" src="genesis-unicorn.png" style="position: absolute; left:-500px; top:100px">
-      <div id="services">
+      <div class="title">
         <h1>Services</h1>
       </div>
-    </div>
   </div>
   <div class="infocard light">
     <table>
@@ -127,51 +124,7 @@
 </footer>
 
   <!release the scripts!>
-  <script type="text/javascript" src="http://scrollmagic.io//js/lib/jquery.min.js"></script>
-  <script type="text/javascript" src="http://scrollmagic.io/js/lib/greensock/TweenMax.min.js"></script>
-	<script type="text/javascript" src="http://scrollmagic.io/scrollmagic/uncompressed/ScrollMagic.js"></script>
-	<script type="text/javascript" src="http://scrollmagic.io/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
-	<script type="text/javascript" src="http://scrollmagic.io/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script>
   <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-
-
-
-  <script>
-  $(function () { // wait for document ready
-		var flightpath = {
-			entry : {
-				curviness: 1.25,
-				autoRotate: true,
-				values: [
-						{x: 200,	 y: -100},
-						{x: 300,  y: -200},
-            {x: 400,  y: -150},
-            {x: 600,  y: -300},
-            {x: 800,  y: -225},
-            {x: 1000,  y: -400},
-            {x: 1200,  y: -300},
-            {x: $(window).width() + 600,	y: -600}
-					]
-			}
-		};
-		// init controller
-		var controller = new ScrollMagic.Controller();
-
-		// create tween
-		var tween = new TimelineMax()
-			.add(TweenMax.to($("#genesis-unicorn"), 5, {css:{bezier:flightpath.entry}, ease:Power1.easeInOut}));
-
-		// build scene
-		var scene = new ScrollMagic.Scene
-    ({triggerElement: "#trigger", duration: 1000, offset: 100})
-						.setPin("#target")
-						.setTween(tween)
-						.addTo(controller);
-
-	})
-  </script>
-
-
 <script>
 // fade scroll arrow
 $(window).scroll(function(){ offset = $(this).scrollTop();
