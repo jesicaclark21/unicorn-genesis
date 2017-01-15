@@ -4,16 +4,24 @@
         href="https://fonts.googleapis.com/css?family=Arima+Madurai|Montserrat">
   <link rel="stylesheet" type="text/css"
         href="main.css">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="script.js"></script>
 </head>
 <body>
 <header>
 </header>
-<main>
+<section class="main">
   <div class="titlecard-1">
     <div class="tagline">
       <h1>Websites that are easy to use</h1>
       <h2>We'll show you how magically simple your web design can be!</h2>
     </div>
+    <a class="arrow-wrap" href="#welcome">
+  <span class="arrow"></span>
+  <!--<span class="hint">scroll</span>-->
+  </a>
   </div>
   <div id="welcome" class="infocard" style="text-align: center;">
   <h1>Are you lost in a changing world?</h1>
@@ -79,23 +87,23 @@
       <h1>The Team</h1>
     </div>
   </div>
-  <div class="infocard">
+  <div class="infocard" id="bio-page">
     <div class="grid">
       <div class="col-1-2">
         <div class="bios">
           <h1>Victorious Snow</h1>
           <h3>The Beauty</h3>
-          <p style="height: 300px;">The name Victorious says it all.<br/>Curabitur blandit tempus porttitor. Curabitur blandit tempus porttitor. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</strong></p>
+          <p style="height: 300px;">I'm your friendly neighborhood designer.My background in programming for various nonprofits gives me a unique perspective on user flow. In addition to remaking your content to be beautiful and engaging, I'll make sure whatever your people need to find is where they expect it.<br/><strong>Tagline: That's ugly.... Do it again!</strong></p>
         </div>
-        <img src="bios/victorious.jpg">
+        <img class="bio-pic" src="bios/victorious.jpg">
       </div>
       <div class="col-1-2">
         <div class="bios">
           <h1>Jesica Clark</h1>
           <h3>The Brains</h3>
-          <p>New and improved with a splash of beauty.Farmer by day and coder by night (sometimes into the next morning), Jesica loves old tech, new tech, and inbetween tech. It you tell her what you want your website to be, she will make it so.<br><strong>Tagline: But, you know what you <em>could</em> do...</strong></p>
+          <p>New and improved with a splash of beauty.Farmer by day and coder by night (sometimes into the next morning), Jesica loves old tech, new tech, and inbetween tech. It you tell her what you want your website to be, she will make it so.<br/><strong>Tagline: But, you know what you <em>could</em> do...</strong></p>
         </div>
-      <img src="bios/jesica.jpg">
+      <img class="bio-pic" src="bios/jesica.jpg">
       </div>
     </div>
   </div>
@@ -119,73 +127,8 @@
       </div>
     </div>
   </div>
-</main>
+</section>
 <footer>
 </footer>
-
-  <!release the scripts!>
-  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-<script>
-// fade scroll arrow
-$(window).scroll(function(){ offset = $(this).scrollTop();
-
-if (offset > 100) {
-
-$("body:not(.scrolled)").addClass("scrolled"); } else { $("body.scrolled").removeClass("scrolled"); }
-
-}); </script>
-
-  <script type="text/javascript">
-
-    $(document).ready(function() {
-  function filterPath(string) {
-  return string
-    .replace(/^\//,'')
-    .replace(/(index|default).[a-zA-Z]{3,4}$/,'')
-    .replace(/\/$/,'');
-  }
-  var locationPath = filterPath(location.pathname);
-  var scrollElem = scrollableElement('html', 'body');
-
-  $('a[href*=#]').each(function() {
-    var thisPath = filterPath(this.pathname) || locationPath;
-    if (  locationPath == thisPath
-    && (location.hostname == this.hostname || !this.hostname)
-    && this.hash.replace(/#/,'') ) {
-      var $target = $(this.hash), target = this.hash;
-      if (target) {
-        var targetOffset = $target.offset().top;
-        $(this).click(function(event) {
-          event.preventDefault();
-          $(scrollElem).animate({scrollTop: targetOffset}, 400, function() {
-            location.hash = target;
-          });
-        });
-      }
-    }
-  });
-
-  // use the first element that is "scrollable"
-  function scrollableElement(els) {
-    for (var i = 0, argLength = arguments.length; i <argLength; i++) {
-      var el = arguments[i],
-          $scrollElement = $(el);
-      if ($scrollElement.scrollTop()> 0) {
-        return el;
-      } else {
-        $scrollElement.scrollTop(1);
-        var isScrollable = $scrollElement.scrollTop()> 0;
-        $scrollElement.scrollTop(0);
-        if (isScrollable) {
-          return el;
-        }
-      }
-    }
-    return [];
-  }
-
-});
-    </script>
-
 </body>
 </html>
