@@ -1,5 +1,23 @@
-
 $(document).ready(function(){
+  $(".hamburger").on('click', function(event) {
+    $(".topnav").toggleClass("responsive");
+    event.preventDefault();
+});
+
+  //toggle nav class on scroll past home
+  $(window).scroll(function() {
+    if ($(window).width() > 768) {
+    var scroll = $(window).scrollTop();
+    var objectSelect = $("#welcome");
+    var objectPosition = objectSelect.offset().top -150;
+    if (scroll > objectPosition) {
+        $(".topnav").addClass("scrollnav");
+    } else {
+        $(".topnav").removeClass("scrollnav");
+      }
+    }
+  });
+
   // Add smooth scrolling to all links
   $("a").on('click', function(event) {
 
@@ -14,8 +32,8 @@ $(document).ready(function(){
       // Using jQuery's animate() method to add smooth page scroll
       // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
       $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 1000, function(){
+        scrollTop: $(hash).offset().top -100
+      }, 800, function(){
 
         // Add hash (#) to URL when done scrolling (default click behavior)
         window.location.hash = hash;
