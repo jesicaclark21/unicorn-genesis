@@ -1,4 +1,10 @@
-html, body, main, section
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body, main
 {
     width: 100%;
     height: 100%;
@@ -6,10 +12,11 @@ html, body, main, section
     padding: 0px;
 }
 
-*, *:after, *:before {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+nav {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
 }
 
 h1 {
@@ -42,6 +49,11 @@ p {
 
 .light p {
   color: #474747;
+}
+
+footer p, footer a{
+  color: white;
+  padding-top: 3em;
 }
 
 a {
@@ -113,19 +125,82 @@ td h1, td h2 {
   text-align: left;
 }
 
+ul.topnav {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  list-style-type: none;
+  text-align: center;
+  margin:0;
+  padding: 0;
+  background: linear-gradient(rgba(40,40,40,.3), rgba(40,40,40,.1), rgba(40,40,40,.5));
+}
+
+ul.scrollnav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  list-style-type: none;
+  text-align: center;
+  margin:0;
+  padding: 0;
+  background: #F37B90;
+  transition: .7s;
+}
+
+ul.topnav li {
+  display: inline;
+}
+
+ul.topnav li a {
+  font-family: 'Arima Madurai', cursive;
+  font-size: 1.5em;
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+ul.scrollnav li a {
+  font-family: 'Arima Madurai', cursive;
+  font-size: 1.2em;
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 10px 16px;
+  text-decoration: none;
+}
+
+ul.topnav li a:hover {
+  background-color: rgba(40, 40, 40, 0.3);
+}
+
+ul.topnav li.burgericon {display: none;}
+
 .title, .tagline{
   color: white;
-  background-color: transparent;
   position: absolute;
-  left: 0;
   top: 30%;
   width: 100%;
   text-align: center;
 }
 
-.tagline h1 {
+.tagline h1, footer h1 {
   font-family: 'Montserrat', sans-serif;
   font-size: 4em;
+  color: white;
+}
+
+footer h1 {
+  position: absolute;
+  width: 100%;
+  top: 20%;
+  text-align: center;
+}
+
+footer h1 a {
   color: white;
 }
 
@@ -144,7 +219,6 @@ td h1, td h2 {
 
 .titlecard-1, .titlecard-2, .titlecard-3, .titlecard-4, .titlecard-5 {
     position: relative;
-    z-index: -1;
     width: 100%;
     min-height: 100%;
     background-attachment: fixed;
@@ -155,43 +229,64 @@ td h1, td h2 {
 
 
 .titlecard-1 {
-  background-image: url(titlecard-1.jpg);
+  background-image: url(images/titlecard-1.jpg);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, .6);
 }
 
 .titlecard-2 {
-  background-image: url(titlecard-3.gif);
+  background-image: url(images/titlecard-3.gif);
   clear: both;
 }
 
 .titlecard-3 {
-  background-image: url(titlecard-2.jpg);
+  background-image: url(images/titlecard-2.jpg);
 }
 
 .titlecard-4 {
-  background-image: url(phil-banner.jpg);
+  background-image: url(images/team-banner.jpg);
 }
 
 .titlecard-5{
-  background-image: url(titlecard-5.jpg);
+  background-image: url(images/titlecard-5.jpg);
 }
 
 .infocard {
+  width: 100%;
   background-color: white;
   color: #777;
   padding: 100px 200px 200px 200px;
 }
 
+
 #pricing {
-  padding-top: 100px;
-  padding-bottom: 100px
+  padding: 100px 50px;
 }
 
 .bios{
-  height: 400px;
+  min-height: 350px;
 }
 
+.bio-pic {
+  border-radius: 50%;
+  max-width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 20px;
+}
+
+footer {
+    clear: both;
+    position: relative;
+    width: 100%;
+    height: 30%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(images/footer.gif);
+}
  /*mobile styles*/
- @media screen and (max-width: 720px) {
+ @media screen and (max-width: 768px) {
 
  .titlecard-1, .titlecard-2, .titlecard-3, .titlecard-4, .titlecard-5 {
    background-attachment: scroll;
@@ -229,6 +324,38 @@ td h1, td h2 {
  }
  #bio-page{
    padding: 50px 50px;
+ }
+
+ul.topnav {
+  text-align: left;
+}
+
+ ul.topnav li:not(:first-child) {
+   display: none;
+ }
+
+ ul.topnav li.burgericon {
+   float: right;
+   display: inline-block;
+ }
+
+ ul.topnav.responsive {
+   position: absolute;
+ }
+
+
+ ul.topnav.responsive li.burgericon {
+   position: absolute;
+   right: 0;
+   top: 0;
+ }
+ ul.topnav.responsive li {
+   float: none;
+   display: inline;
+ }
+ ul.topnav.responsive li a {
+   display: block;
+   text-align: left;
  }
 
  .bios {
