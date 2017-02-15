@@ -258,6 +258,10 @@ footer h1 a {
   padding: 100px 200px 200px 200px;
 }
 
+#pricing {
+  padding: 100px 50px;
+}
+
 .bios{
   min-height: 350px;
 }
